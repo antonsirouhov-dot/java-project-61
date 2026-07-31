@@ -1,6 +1,14 @@
 plugins {
+	id("org.sonarqube") version "7.3.1.8318"
 	application
     id("java")
+}
+
+sonar {
+	propeties {
+		property("sonar.projectKey", "antonsirouhov-dot_java-project-61")
+		property("sonar.organization", "antonsirouhov-dot")
+	}
 }
 
 application {
@@ -22,4 +30,8 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+tasks.getByName<JavaExec>("run") {
+	standardInput = System.`in`
 }
