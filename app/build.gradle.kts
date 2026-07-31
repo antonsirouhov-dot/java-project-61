@@ -1,7 +1,12 @@
 plugins {
+	id ("checkstyle")
 	id("org.sonarqube") version "7.3.1.8318"
 	application
     id("java")
+}
+
+checkstyle {
+	toolVersion = "10.12.4"
 }
 
 sonar {
@@ -23,6 +28,7 @@ repositories {
 }
 
 dependencies {
+	checkstyle("com.puppycrawl.tools:checkstyle:${checkstyle.toolVersion}")
     testImplementation(platform("org.junit:junit-bom:6.0.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
