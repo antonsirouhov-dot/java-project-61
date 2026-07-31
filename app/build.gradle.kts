@@ -5,7 +5,7 @@ plugins {
 }
 
 sonar {
-	propeties {
+	properties {
 		property("sonar.projectKey", "antonsirouhov-dot_java-project-61")
 		property("sonar.organization", "antonsirouhov-dot")
 	}
