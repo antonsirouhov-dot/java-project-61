@@ -1,10 +1,10 @@
 package hexlet.code;
 
-import java.util.Locale;
 import  java.util.Random;
+
 import  java.util.Scanner;
 
-public class Even{
+public class Even {
     public static void checkingParity() {
         System.out.println("Welcome to the Brain Games!\nMay i have your name?");
         Scanner enterName = new Scanner(System.in);
@@ -24,22 +24,22 @@ public class Even{
                 count++;
             } else if (number % 2 == 0 && answer.equals("no")) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'\nLet's try again, " + name);
-                isWin=false;
+                isWin = false;
                 break;
             } else if (number % 2 != 0 && answer.equals("yes")) {
                 System.out.println("'yes' is wrong answer ;(. Correct answer wan 'no'\nLet's try again, " + name);
-                isWin=false;
+                isWin = false;
                 break;
             } else if (number % 2 != 0 && answer.equals("no")) {
                 System.out.println("Correct!");
                 count++;
             } else {
                 System.out.println(answer + " is wrong answer, try again");
-                isWin=false;
+                isWin = false;
                 break;
             }
         }
-        if(isWin) {
+        if (isWin) {
             System.out.println("Congratulations, " + name);
         }
     }
