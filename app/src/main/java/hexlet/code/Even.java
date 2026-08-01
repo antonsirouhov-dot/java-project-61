@@ -5,13 +5,13 @@ import  java.util.Random;
 import  java.util.Scanner;
 
 public class Even {
+    static Random random = new Random();
     public static void checkingParity() {
         System.out.println("Welcome to the Brain Games!\nMay i have your name?");
         Scanner enterName = new Scanner(System.in);
         String name = enterName.nextLine();
         System.out.println("Hello, " + name + "!\nAnswer 'yes' if the number is even, otherwise answer 'no'");
         Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
         boolean isWin = true;
         int count = 0;
         while (count < 3) {
