@@ -21,3 +21,6 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=antonsirouhov-dot_java-project-61&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=antonsirouhov-dot_java-project-61)
 
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=antonsirouhov-dot_java-project-61&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=antonsirouhov-dot_java-project-61)
+
+## Demo
+[!asciicast](https://asciinema.org/a/xEA8xQ7s5YEbLre7)
