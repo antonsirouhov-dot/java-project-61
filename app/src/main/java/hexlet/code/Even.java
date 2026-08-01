@@ -10,13 +10,13 @@ public class Even {
         Scanner enterName = new Scanner(System.in);
         String name = enterName.nextLine();
         System.out.println("Hello, " + name + "!\nAnswer 'yes' if the number is even, otherwise answer 'no'");
+        Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         boolean isWin = true;
         int count = 0;
         while (count < 3) {
             int number = random.nextInt(1, 101);
             System.out.println("Question: " + number);
-            Scanner scanner = new Scanner(System.in);
             String answer = scanner.nextLine().trim().toLowerCase();
             System.out.println("Your answer: " + answer);
             if (number % 2 == 0 && answer.equals("yes")) {
