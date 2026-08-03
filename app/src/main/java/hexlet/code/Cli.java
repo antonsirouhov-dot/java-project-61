@@ -3,11 +3,10 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Cli {
-    @SuppressWarnings("java:s106")
     public static void greetUser() {
-        System.out.println("Welcome to the Brain Games!\nMay i know your name?");
+        System.out.println("Welcome to the Brain Games!\nMay i know your name?"); //NOSONAR
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
-        System.out.println("Hello, " + name + "!");
+        System.out.println("Hello, " + name + "!"); //NOSONAR
     }
 }
