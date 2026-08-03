@@ -5,6 +5,7 @@ import  java.util.Random;
 import  java.util.Scanner;
 
 public class Even {
+    @SuppressWarnings("java:s106")
     static Random random = new Random();
     public static void checkingParity() {
         System.out.println("Welcome to the Brain Games!\nMay i have your name?");

@@ -3,9 +3,10 @@ package hexlet.code;
 import  java.util.Scanner;
 
 public class App {
+    @SuppressWarnings("java:s106")
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter");
-        System.out.println("2 - Even\n1 - Greet\n0 - Exit");
+        System.out.println("3 - Calc\n2 - Even\n1 - Greet\n0 - Exit");
         Scanner chooseGame = new Scanner(System.in);
         int game = chooseGame.nextInt();
         System.out.println("Your choice " + game);
@@ -18,6 +19,9 @@ public class App {
                 break;
             case 2:
                 Even.checkingParity();
+                break;
+            case 3:
+                Calc.runGameCalc();
                 break;
             default:
                 System.out.println("Unknown game");

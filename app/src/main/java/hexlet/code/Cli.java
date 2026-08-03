@@ -3,6 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Cli {
+    @SuppressWarnings("java:s106")
     public static void greetUser() {
         System.out.println("Welcome to the Brain Games!\nMay i know your name?");
         Scanner scanner = new Scanner(System.in);
