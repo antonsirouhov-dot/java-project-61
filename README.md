@@ -24,3 +24,4 @@
 
 ## Demo
 [!asciicast](https://asciinema.org/a/xEA8xQ7s5YEbLre7)
+[!asciicast](https://asciinema.org/a/lqGV1xtQG0IxE2MD)
