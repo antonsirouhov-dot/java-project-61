@@ -33,7 +33,7 @@ public class Calc implements Game {
         String answer = scanner.nextLine();
         System.out.println("Your answer: " + answer); //NOSONAR
         if (!answer.equals(String.valueOf(result))) {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + result + "'");
+            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + result + "'"); //NOSONAR
             return false;
         } else {
             return true;
