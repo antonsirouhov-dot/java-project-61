@@ -1,5 +1,8 @@
 package hexlet.code;
 
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+
 import  java.util.Scanner;
 
 public class App {
@@ -9,6 +12,7 @@ public class App {
         Scanner chooseGame = new Scanner(System.in);
         int game = chooseGame.nextInt();
         System.out.println("Your choice " + game); //NOSONAR
+        Game games;
         switch (game) {
             case 0:
                 System.out.println("Exit"); //NOSONAR
@@ -17,10 +21,14 @@ public class App {
                 Cli.greetUser();
                 break;
             case 2:
-                Even.checkingParity();
+                String name2 = Cli.greetUser();
+                games = new Even();
+                Engine.runGame(name2, new Even());
                 break;
             case 3:
-                Calc.runGameCalc();
+                String name3 = Cli.greetUser();
+                games = new Calc();
+                Engine.runGame(name3, new Calc());
                 break;
             default:
                 System.out.println("Unknown game"); //NOSONAR
