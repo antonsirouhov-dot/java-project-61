@@ -3,20 +3,21 @@ package hexlet.code;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 
 import  java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Please enter the game number and press Enter"); //NOSONAR
-        System.out.println("4 - GCD\n3 - Calc\n2 - Even\n1 - Greet\n0 - Exit"); //NOSONAR
+        System.out.println("Please enter the game number and press Enter"); //NO SONAR
+        System.out.println("5 - Progression\n4 - GCD\n3 - Calc\n2 - Even\n1 - Greet\n0 - Exit"); //NO SONAR
         Scanner chooseGame = new Scanner(System.in);
         int game = chooseGame.nextInt();
-        System.out.println("Your choice " + game); //NOSONAR
+        System.out.println("Your choice " + game); //NO SONAR
         Game games;
         switch (game) {
             case 0:
-                System.out.println("Exit"); //NOSONAR
+                System.out.println("Exit"); //NO SONAR
                 break;
             case 1:
                 Cli.greetUser();
@@ -36,8 +37,13 @@ public class App {
                 games = new GCD();
                 Engine.runGame(name4, new GCD());
                 break;
+            case 5:
+                String name5 = Cli.greetUser();
+                games = new Progression();
+                Engine.runGame(name5, new Progression());
+                break;
             default:
-                System.out.println("Unknown game"); //NOSONAR
+                System.out.println("Unknown game"); //NO SONAR
         }
 
     }
