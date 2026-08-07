@@ -10,7 +10,7 @@ public class Calc implements Game {
     static Random random = new Random();
     Scanner scanner = new Scanner(System.in);
     public boolean playRound() {
-        System.out.println("What the result of the expression?"); //NO SONAR
+        System.out.println("What is the result of the expression?"); //NO SONAR
         char[] operators = {'+', '-', '*'};
         int number1 = random.nextInt(1, 101);
         int nubmer2 = random.nextInt(1, 101);
