@@ -6,7 +6,7 @@ public class Engine {
         while (count < 3) {
             boolean result = game.playRound();
             if (!result) {
-                System.out.println("Let's try again, " + name); //NO SONAR
+                System.out.println("Let's try again, " + name + "!"); //NO SONAR
                 return;
             }
             count++;
