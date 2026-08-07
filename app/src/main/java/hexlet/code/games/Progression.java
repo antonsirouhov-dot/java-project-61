@@ -26,7 +26,7 @@ public class Progression implements Game {
         String userAnswer = scanner.nextLine().trim().toLowerCase();
         System.out.println("Your answer " + userAnswer);
         if (!userAnswer.equals(correctAnswer)) {
-            System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'");
+            System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
             return false;
         }
         return true;
