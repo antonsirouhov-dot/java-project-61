@@ -2,7 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Game;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 import  java.util.Random;
@@ -22,7 +21,7 @@ public class Progression implements Game {
         int correctIndex = random.nextInt(progression.length);
         String correctAnswer = progression[correctIndex];
         progression[correctIndex] = "..";
-        System.out.println("Question " + Arrays.toString(progression));
+        System.out.println("Question " + String.join(" ", progression));
         String userAnswer = scanner.nextLine().trim().toLowerCase();
         System.out.println("Your answer " + userAnswer);
         if (!userAnswer.equals(correctAnswer)) {
