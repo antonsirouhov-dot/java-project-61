@@ -11,7 +11,7 @@ public class Progression implements Game {
     Random random = new Random();
     public boolean playRound() {
         System.out.println("What number is missing in the progression?"); //NO SONAR
-        int indexCount = random.nextInt(3, 11);
+        int indexCount = random.nextInt(5, 11);
         int start = random.nextInt(1, 101);
         int step = random.nextInt(1, 11);
         String[] progression = new String[indexCount];
