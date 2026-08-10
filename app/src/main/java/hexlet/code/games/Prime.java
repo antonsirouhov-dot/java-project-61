@@ -8,7 +8,7 @@ public class Prime implements Game {
     Scanner scanner = new Scanner(System.in);
     Random random = new Random();
     public boolean playRound() {
-        System.out.println("Answer 'yes' if given nubmer is primme. Otherwise answer 'no'.");
+        System.out.println("Answer 'yes' if given nubmer is prime. Otherwise answer 'no'.");
         int number = random.nextInt(1, 101);
         System.out.println("Question: " + number);
         String correctAnswer = "yes";
