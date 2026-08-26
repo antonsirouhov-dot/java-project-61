@@ -13,12 +13,10 @@
 - Prime - Определить, является ли число простым.
 
 ## Установка
-Скачайте репозиторий c гитхаба
-В репозитории app напишите:
+Скачайте репозиторий c гитхаба и в папке app напишите следующее:
 - make build
 - ./gradlew installDist
 - make run-dist
-Наслаждайтесь ;)
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/antonsirouhov-dot/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/antonsirouhov-dot/java-project-61/actions)
