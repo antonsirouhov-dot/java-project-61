@@ -13,7 +13,7 @@
 - Prime - Определить, является ли число простым.
 
 ## Установка
-Скачайте репозиторий
+Скачайте репозиторий c гитхаба и проведите установку make build, после проведите запуск make run-dist, наслаждайтесь)
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/antonsirouhov-dot/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/antonsirouhov-dot/java-project-61/actions)
