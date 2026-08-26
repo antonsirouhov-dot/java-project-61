@@ -14,7 +14,7 @@ public class App {
         System.out.println("6 - Prime\n5 - Progression\n4 - GCD\n3 - Calc\n2 - Even\n1 - Greet\n0 - Exit"); //NO SONAR
         Scanner chooseGame = new Scanner(System.in);
         int game = chooseGame.nextInt();
-        System.out.println("Your choice: " + game);
+        System.out.println("Your choice:" + game);
         switch (game) {
             case 0:
                 System.out.println("Exit"); //NO SONAR
