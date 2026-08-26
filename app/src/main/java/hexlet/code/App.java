@@ -12,9 +12,9 @@ public class App {
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter"); //NO SONAR
         System.out.println("6 - Prime\n5 - Progression\n4 - GCD\n3 - Calc\n2 - Even\n1 - Greet\n0 - Exit"); //NO SONAR
+        System.out.println("Your choise:");
         Scanner chooseGame = new Scanner(System.in);
         int game = chooseGame.nextInt();
-        System.out.println("Your choice:" + game);
         switch (game) {
             case 0:
                 System.out.println("Exit"); //NO SONAR
