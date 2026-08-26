@@ -1,31 +1,28 @@
 package hexlet.code.games;
 
-import hexlet.code.Game;
+import hexlet.code.Engine;
 
 import java.util.Random;
 
-import java.util.Scanner;
-
-public class GCD implements Game {
-    Scanner scanner = new Scanner(System.in);
+public class GCD {
     static Random random = new Random();
-    public boolean playRound() {
-        System.out.println("Find the greatest common divisor of given numbers."); //NO SONAR
-        int number1 = random.nextInt(1, 101);
-        int number2 = random.nextInt(1, 101);
-        System.out.println("Question: " + number1 + " " + number2); //NO SONAR
-        while (number2 != 0) {
-            int r = number1 % number2;
-            number1 = number2;
-            number2 = r;
+    public static String question = "Find the greatest common divisor of given numbers.";
+    public static void startGame() {
+        String[][] rounds = new String[3][2];
+        int number1;
+        int number2;
+        for (int i = 0; i < 3; i++) {
+            number1 = random.nextInt(1, 101);
+            number2 = random.nextInt(1, 101);
+            rounds[i][0] = number1 + " " + number2;
+            while (number2 != 0) {
+                int r = number1 % number2;
+                number1 = number2;
+                number2 = r;
+            }
+            rounds[i][1] = String.valueOf(number1);
         }
-        int correctanswer = number1;
-        String answer = scanner.nextLine().trim();
-        System.out.println("Your answer: " + answer);
-        if (!answer.equals(String.valueOf(correctanswer))) {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctanswer + "'.");
-            return false;
-        }
-        return true;
+        Engine engine = new Engine();
+        engine.runGame(question, rounds);
     }
 }

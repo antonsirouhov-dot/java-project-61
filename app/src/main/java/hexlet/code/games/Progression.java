@@ -1,33 +1,31 @@
 package hexlet.code.games;
 
-import hexlet.code.Game;
-
-import java.util.Scanner;
+import hexlet.code.Engine;
 
 import  java.util.Random;
 
-public class Progression implements Game {
-    Scanner scanner = new Scanner(System.in);
-    Random random = new Random();
-    public boolean playRound() {
-        System.out.println("What number is missing in the progression?"); //NO SONAR
-        int indexCount = random.nextInt(5, 11);
-        int start = random.nextInt(1, 101);
-        int step = random.nextInt(1, 11);
-        String[] progression = new String[indexCount];
-        for (int i = 0; i < progression.length; i++) {
-            progression[i] = String.valueOf(start + i * step);
+public class Progression {
+    static Random random = new Random();
+    public static String question = "What number is missing in the progression?";
+    public static void startGame() {
+        String[][] rounds = new String[3][2];
+        int indexCount;
+        int start;
+        int step;
+        for (int j = 0; j < 3; j++) {
+            indexCount = random.nextInt(5, 11);
+            start = random.nextInt(1, 101);
+            step = random.nextInt(1, 11);
+            String[] progression = new String[indexCount];
+            for (int i = 0; i < progression.length; i++) {
+                progression[i] = String.valueOf(start + i * step);
+            }
+            int correctIndex = random.nextInt(progression.length);
+            rounds[j][1] = progression[correctIndex];
+            progression[correctIndex] = "..";
+            rounds[j][0] = String.join(" ", progression);
         }
-        int correctIndex = random.nextInt(progression.length);
-        String correctAnswer = progression[correctIndex];
-        progression[correctIndex] = "..";
-        System.out.println("Question: " + String.join(" ", progression));
-        String userAnswer = scanner.nextLine().trim().toLowerCase();
-        System.out.println("Your answer " + userAnswer);
-        if (!userAnswer.equals(correctAnswer)) {
-            System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
-            return false;
-        }
-        return true;
+        Engine engine = new Engine();
+        engine.runGame(question, rounds);
     }
 }

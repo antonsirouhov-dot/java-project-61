@@ -1,43 +1,37 @@
 package hexlet.code.games;
 
-import hexlet.code.Game;
-
-import java.util.Scanner;
-
+import hexlet.code.Engine;
 import java.util.Random;
 
-public class Calc implements Game {
+public class Calc {
     static Random random = new Random();
-    Scanner scanner = new Scanner(System.in);
-    public boolean playRound() {
-        System.out.println("What is the result of the expression?"); //NO SONAR
+    public static String question = "What is the result of the expression?";
+    public static void startGame() {
         char[] operators = {'+', '-', '*'};
-        int number1 = random.nextInt(1, 101);
-        int nubmer2 = random.nextInt(1, 101);
-        char operator = operators[random.nextInt(operators.length)];
-        System.out.println("Question: " + number1 + " " + operator + " " + nubmer2); //NO SONAR
-        int result;
-        switch (operator) {
-            case '+':
-                result = number1 + nubmer2;
-                break;
-            case '-':
-                result = number1 - nubmer2;
-                break;
-            case '*':
-                result = number1 * nubmer2;
-                break;
-            default:
-                throw new RuntimeException();
+        String[][] rounds = new String[3][2];
+        int number1;
+        int number2;
+        for (int i = 0; i < 3; i++) {
+            number1 = random.nextInt(1, 101);
+            number2 = random.nextInt(1, 101);
+            char operator = operators[random.nextInt(operators.length)];
+            rounds[i][0] = number1 + " " + operator + " " + number2; //NO SONAR
+            switch (operator) {
+                case '+':
+                    rounds[i][1] = String.valueOf(number1 + number2);
+                    break;
+                case '-':
+                    rounds[i][1] = String.valueOf(number1 - number2);
+                    break;
+                case '*':
+                    rounds[i][1] = String.valueOf(number1 * number2);
+                    break;
+                default:
+                    throw new RuntimeException();
+            }
         }
-        String answer = scanner.nextLine();
-        System.out.println("Your answer: " + answer); //NOSONAR
-        if (!answer.equals(String.valueOf(result))) {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + result + "'."); //NO SONAR
-            return false;
-        } else {
-            return true;
-        }
+        Engine engine = new Engine();
+        engine.runGame(question, rounds);
     }
 }
 

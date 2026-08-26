@@ -1,3 +1,20 @@
+# Brain Games
+
+Это мой первый проект на Java, в рамках обучение на курсе хекслет "Java разработчик".
+Проект представляет собой маленьную программу с меню и небольшим набором игр.
+
+## Games
+
+Следующие игры доступные для выбора:
+- Even - Определить, четное ли число.
+- Calc - Решить выражение.
+- GCD - Найти наибольший делитель двух чисел.
+- Progression - Найти пропущенное число в прогрессии.
+- Prime - Определить, является ли число простым.
+
+## Установка
+Скачайте репозиторий
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/antonsirouhov-dot/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/antonsirouhov-dot/java-project-61/actions)
 

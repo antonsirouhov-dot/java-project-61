@@ -15,8 +15,6 @@ public class App {
         Scanner chooseGame = new Scanner(System.in);
         int game = chooseGame.nextInt();
         System.out.println("Your choice " + game); //NO SONAR
-        Game games;
-        String name;
         switch (game) {
             case 0:
                 System.out.println("Exit"); //NO SONAR
@@ -25,29 +23,19 @@ public class App {
                 Cli.greetUser();
                 break;
             case 2:
-                name = Cli.greetUser();
-                games = new Even();
-                Engine.runGame(name, games);
+                Even.startGame();
                 break;
             case 3:
-                name = Cli.greetUser();
-                games = new Calc();
-                Engine.runGame(name, games);
+                Calc.startGame();
                 break;
             case 4:
-                name = Cli.greetUser();
-                games = new GCD();
-                Engine.runGame(name, games);
+                GCD.startGame();
                 break;
             case 5:
-                name = Cli.greetUser();
-                games = new Progression();
-                Engine.runGame(name, games);
+                Progression.startGame();
                 break;
             case 6:
-                name = Cli.greetUser();
-                games = new Prime();
-                Engine.runGame(name, games);
+                Prime.startGame();
                 break;
             default:
                 System.out.println("Unknown game"); //NO SONAR

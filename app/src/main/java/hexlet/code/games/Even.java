@@ -1,25 +1,24 @@
 package hexlet.code.games;
 
-import hexlet.code.Game;
+import hexlet.code.Engine;
+import java.util.Random;
 
-import  java.util.Random;
-
-import  java.util.Scanner;
-
-public class Even implements Game {
+public class Even {
     static Random random = new Random();
-    Scanner scanner = new Scanner(System.in);
-    public boolean playRound() {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'."); //NO SONAR
-        int number = random.nextInt(1, 101);
-        System.out.println("Question: " + number); //NOSONAR
-        String answer = scanner.nextLine().trim().toLowerCase();
-        String correctAnswer = number % 2 == 0 ? "yes" : "no";
-        System.out.println("Your answer: " + answer); //NOSONAR
-        if (!answer.equals((correctAnswer))) {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
-            return false;
+    public static String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    public static void startGame() {
+        String[][] rounds = new String[3][2];
+        int number;
+        for (int i = 0; i < 3; i++) {
+            number = random.nextInt(1, 101);
+            rounds[i][0] = String.valueOf(number);
+            if (number % 2 == 0) {
+                rounds[i][1] = "yes";
+            } else {
+                rounds[i][1] = "no";
+            }
         }
-        return true;
+        Engine engine = new Engine();
+        engine.runGame(question, rounds);
     }
 }
