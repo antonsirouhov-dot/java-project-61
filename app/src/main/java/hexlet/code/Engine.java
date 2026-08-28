@@ -3,8 +3,9 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    Scanner scanner = new Scanner(System.in);
-    public void runGame(String question, String[][] rounds) {
+    public static final int ROUNDS = 3;
+    static Scanner scanner = new Scanner(System.in);
+    public static void runGame(String question, String[][] rounds) {
         System.out.println("Welcome to the Brain Games!\nMay I have your name?"); //NO SONAR
         String name = scanner.nextLine();
         System.out.println("Hello, " + name + "!"); //NO SONAR

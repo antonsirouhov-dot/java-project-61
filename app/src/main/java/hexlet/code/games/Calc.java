@@ -8,10 +8,10 @@ public class Calc {
     public static String question = "What is the result of the expression?";
     public static void startGame() {
         char[] operators = {'+', '-', '*'};
-        String[][] rounds = new String[3][2];
+        String[][] rounds = new String[Engine.ROUNDS][2];
         int number1;
         int number2;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.ROUNDS; i++) {
             number1 = random.nextInt(1, 101);
             number2 = random.nextInt(1, 101);
             char operator = operators[random.nextInt(operators.length)];
@@ -30,8 +30,7 @@ public class Calc {
                     throw new RuntimeException();
             }
         }
-        Engine engine = new Engine();
-        engine.runGame(question, rounds);
+        Engine.runGame(question, rounds);
     }
 }
 

@@ -13,8 +13,8 @@ public class App {
         System.out.println("Please enter the game number and press Enter"); //NO SONAR
         System.out.println("6 - Prime\n5 - Progression\n4 - GCD\n3 - Calc\n2 - Even\n1 - Greet\n0 - Exit"); //NO SONAR
         System.out.println("Your choice:");
-        Scanner chooseGame = new Scanner(System.in);
-        int game = chooseGame.nextInt();
+        Scanner userChoice = new Scanner(System.in);
+        int game = userChoice.nextInt();
         switch (game) {
             case 0:
                 System.out.println("Exit"); //NO SONAR
@@ -38,7 +38,7 @@ public class App {
                 Prime.startGame();
                 break;
             default:
-                System.out.println("Unknown game"); //NO SONAR
+                System.out.println("Unknown user choice " + game); //NO SONAR
         }
 
     }
